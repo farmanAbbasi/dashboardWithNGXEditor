@@ -1,0 +1,56 @@
+<div class="body">
+
+  <div class="row" *ngIf="flagForPost">
+    <div class="col-10">
+    <!--  <input  (keyup)="onThoughtKeyUp($event)" [(ngModel)]="thought" name="thought" type="text" class="form-control thought" placeholder="Jot down your thoughts...">-->
+    <app-editor></app-editor>
+    </div>
+    <div class="col-1">
+      <button  (click)="shareThought()" class="btn thought" type="button">
+        <i class="fa fa-paper-plane share-icon"></i>
+      </button>
+    </div>
+    <div class="col-1">
+      <select class="btn thought">
+        <option value="post">{{selected}}</option>
+        <!--if post is selected-->
+      </select>
+    </div>
+  </div>
+
+  <div *ngIf="toShare">
+    <div *ngFor="let t of thoughtToShare.reverse();let i=index">
+      <mat-card class="example-card">
+        <!--mat-elevation-z0-->
+        <mat-card-content class="topCard">
+          <p>{{t}}</p>
+        </mat-card-content>
+        <mat-card-header class="bottomCard">
+          <figure id="profileTab">
+            <img alt="User Name" class="img-circle" src="assets/images/profile/profile.jpg">
+            <span>Posted by John Doe</span>
+          </figure>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+
+
+
+  <div infiniteScroll (scrolled)="onScroll()" [scrollWindow]="true">
+    <div *ngFor="let t of itemsToShow; let i = index">
+      <mat-card class="example-card">
+        <mat-card-content>
+          <p>{{i+1}} {{t.desc}}</p>
+        </mat-card-content>
+        <mat-card-header>
+          <figure id="profileTab">
+            <img alt="User Name" class="img-circle" src="assets/images/profile/profile.jpg">
+            <span>Posted by {{t.name}}</span>
+          </figure>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

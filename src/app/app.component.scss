@@ -1,0 +1,36 @@
+
+.main {
+    min-height: 662px;
+    z-index: 12;
+    margin-left: 250px;
+    -webkit-transition: margin-left 0.3s ease, left 0.3s ease;
+    -moz-transition: margin-left 0.3s ease, left 0.3s ease;
+    -ms-transition: margin-left 0.3s ease, left 0.3s ease;
+    -o-transition: margin-left 0.3s ease, left 0.3s ease;
+    transition: margin-left 0.3s ease, left 0.3s ease;
+	position: relative;
+    padding-top: 65px;
+    padding-bottom: 50px;
+	margin-right: 0;
+    -webkit-transition: margin-right 0.3s ease, right 0.3s ease;
+    -moz-transition: margin-right 0.3s ease, right 0.3s ease;
+    -ms-transition: margin-right 0.3s ease, right 0.3s ease;
+    -o-transition: margin-right 0.3s ease, right 0.3s ease;
+    transition: margin-right 0.3s ease, right 0.3s ease;
+}
+.dashboard {
+    overflow: hidden;
+}
+
+.dashboard .container-fluid {
+    padding: 10px 15px;
+}
+@media (max-width: 1170px) {
+    .wrapper {
+        overflow: hidden;
+    }
+    .main {
+        /*margin-left: auto;*/
+        left: 0;
+    }
+}

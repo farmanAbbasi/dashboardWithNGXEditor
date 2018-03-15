@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~gridstack/dist/gridstack.min.css";
+@import url('https://fonts.googleapis.com/css?family=Exo');
+body {
+    background: #ebeff5;
+}
+
+#scScroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+#cScroll::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+}
+
+#cScroll::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #bbbbbb4d;
+}
+
+.scrollbar {
+    margin-left: 30px;
+    float: left;
+    background: #fff;
+    margin-bottom: 25px;
+}
+
+.scrollbar {
+    overflow-y: hidden !important;
+}
+
+.scrollbar:hover {
+    overflow-y: scroll !important;
+}
